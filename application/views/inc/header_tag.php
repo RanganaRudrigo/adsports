@@ -55,3 +55,4 @@
 
 
 </style>
+<link href="<?= base_url('media/css/') ?>responsive.css" rel="stylesheet">

@@ -185,6 +185,11 @@ class Home extends Front_Controller
         $this->view('about_us');
     }
 
+    public function brands()
+    {
+        $this->view('brands');
+    }
+
     public function network()
     {
         $this->view('network');

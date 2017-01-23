@@ -59,10 +59,10 @@ $route['About-Us'] = 'Home/about_us';
 $route['Contact-Us'] = 'Home/contact_us';
 $route['Services'] = 'Home/services';
 $route['Packages'] = 'Home/packages';
-$route['IP-Tv'] = 'Home/iptv';
-$route['Package-Details/(.+)/(.+)/(:num)'] = 'Home/package_details/$3';
+//$route['IP-Tv'] = 'Home/iptv';
+//$route['Package-Details/(.+)/(.+)/(:num)'] = 'Home/package_details/$3';
 
-//$route['Data-Bank'] = 'Home/databank';
+$route['Brands'] = 'Home/brands';
 //$route['Foreign-Principals'] = 'Home/foreign_principals';
 //$route['Vacancies'] = 'Vacancies/index';
 //$route['Vacancy-Details/(.+)/(.+)'] = 'Vacancies/details/$2';
