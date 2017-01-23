@@ -112,7 +112,7 @@
 
                                         <div class="col-lg-6" style="display: none">
                                             <div class="form-group">
-                                                <label for="name">Price Range (To) </label>
+                                                <label for="name">Price </label>
                                                 <input type="text" id="PriceRangeTo" name="form[PriceRangeTo]"
                                                        value="<?= set_value('form[PriceRangeTo]', $obj->PriceRangeTo) ?>"
                                                        class="form-control">
@@ -122,7 +122,7 @@
 
                                         <div class="col-lg-6" style="display: none">
                                             <div class="form-group">
-                                                <label for="name">Price Range (From)</label>
+                                                <label for="name">Discount Price</label>
                                                 <input type="text" id="PriceRangeFrom" name="form[PriceRangeFrom]"
                                                        value="<?= set_value('form[PriceRangeFrom]', $obj->PriceRangeFrom) ?>"
                                                        class="form-control">
@@ -216,7 +216,7 @@
 
 
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6" style="display: none;">
                                             <div class="form-group">
                                                 <label> Document
                                                     <small> Doc: size less than 2MB[.PDF only]</small>

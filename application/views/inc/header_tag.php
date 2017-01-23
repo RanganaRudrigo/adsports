@@ -1,6 +1,5 @@
 <!-- Basic page needs
-	============================================ -->
-
+   ============================================ -->
 <title><?= TITLE ?></title>
 <meta charset="utf-8">
 <meta name="keywords" content="" />
@@ -13,7 +12,10 @@
 
 <!-- Favicon
 ============================================ -->
-
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= base_url('media/images/') ?>favicon.pngfavicon.pngfavicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= base_url('media/images/') ?>favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= base_url('media/images/') ?>favicon.png">
+<link rel="apple-touch-icon-precomposed" href="favicon.png">
 <link rel="shortcut icon" href="<?= base_url('media/images/') ?>favicon.png">
 
 <!-- Google web fonts
@@ -22,29 +24,34 @@
 
 <!-- Libs CSS
 ============================================ -->
-<link rel="stylesheet" href="<?= base_url('media/css/') ?>bootstrap.min.css">
-<link href="<?= base_url('media/css/') ?>font-awesome.min.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>bootstrap-datetimepicker.min.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>owl.carousel.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>lib.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>jquery-ui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<?= base_url('media/css/') ?>bootstrap/css/bootstrap.min.css">
+<link href="<?= base_url('media/css/') ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="<?= base_url('media/js/') ?>datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="<?= base_url('media/js/') ?>owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="<?= base_url('media/css/') ?>themecss/lib.css" rel="stylesheet">
+<link href="<?= base_url('media/js/') ?>jquery-ui/jquery-ui.min.css" rel="stylesheet">
 
 <!-- Theme CSS
 ============================================ -->
-<link href="<?= base_url('media/css/') ?>home2.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>so_megamenu.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>so-categories.css" rel="stylesheet">
-<link href="<?= base_url('media/css/') ?>so-listing-tabs.css" rel="stylesheet">
-
+<link href="<?= base_url('media/css/') ?>themecss/so_megamenu.css" rel="stylesheet">
+<link href="<?= base_url('media/css/') ?>themecss/so-categories.css" rel="stylesheet">
+<link href="<?= base_url('media/css/') ?>themecss/so-listing-tabs.css" rel="stylesheet">
+<link id="color_scheme" href="<?= base_url('media/css/') ?>home2.css" rel="stylesheet">
 <link href="<?= base_url('media/css/') ?>responsive.css" rel="stylesheet">
+<link href="<?= base_url('media/css/') ?>theme.css" rel="stylesheet">
+<style type="text/css">
 
+	.col-md-5-1 {
+		width:57.33333333%;
+	}
+	@media (max-width: 767px){
+		.col-md-4-1 {
+			width: 100%;
+		}
+		.shopping_cart {
+			padding: 0 15px;
+		}
+	}
 
-<!--<link id="color_scheme" href="<?/*= base_url('media/css/') */?>theme.css" rel="stylesheet">-->
-
-
-
-
-<style>
 
 </style>
-

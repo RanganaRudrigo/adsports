@@ -160,6 +160,33 @@
                     </ul>
                 </li>
 
+                <li class="has_sub" style="">
+                    <a href="#" class="waves-effect">
+                        <i class="zmdi zmdi-fire"></i>
+                        <span> Special Offers </span> <span
+                            class="menu-arrow"></span> </a>
+                    <ul style="">
+                        <li><a href="<?= base_url('admin/offers/create') ?>"><span>Create</span></a></li>
+                        <li><a href="<?= base_url('admin/offers/') ?>"><span>Manage</span></a></li>
+                        <li><a href="<?= base_url('admin/offers/rearrange') ?>"><span>Product Re-arrange</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="has_sub" style="">
+                    <a href="#" class="waves-effect">
+                        <i class="ion-ios7-printer"></i>
+                        <span> Garments </span> <span
+                            class="menu-arrow"></span> </a>
+                    <ul style="">
+                        <li><a href="<?= base_url('admin/garments/create') ?>"><span>Create</span></a></li>
+                        <li><a href="<?= base_url('admin/garments/') ?>"><span>Manage</span></a></li>
+                        <li><a href="<?= base_url('admin/garments/rearrange') ?>"><span>Garments Re-arrange</span></a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="has_sub" style="display: none">
                     <a href="#" class="waves-effect">
                         <i class="zmdi zmdi-fire"></i>
