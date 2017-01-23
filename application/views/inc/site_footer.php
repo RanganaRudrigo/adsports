@@ -1,38 +1,33 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: ITMart-6
- * Date: 12/29/2016
- * Time: 2:08 PM
- */
-
-?>
-
 <script type="text/javascript">
     <!--
     var $typeheader = 'header-home2';
     //-->
 </script>
 
+
 <!--custom footer  -->
 <section style="background-color:#201f1f;">
-    <div class="container address_foot" >
+    <div class="container address_foot">
 
         <div class="col-lg-12" style="padding-top:2%; padding-bottom:2%;">
             <div class="row">
-                <div class="col-lg-3">
-                    <p>Address:&nbsp;<a>#136, Dam Street, <br>Colombo - 12, Sri Lanka</a></p>
+                <div class="col-lg-3 ">
+                    <p>Address:&nbsp;#180D, Heighlevel Road, <br>Nugegoda, Sri Lanka</p>
                 </div>
                 <div class="col-lg-3">
-                    <p> Phone: <a>+94 112 473 744</a> <br>Fax: <a>+94 112 478 172 </a></p>
+                    <p> Phone: +94 112 828 309 <br>
+                        Phone: +94 114 921 986
+                        </a></p>
                 </div>
-                <div class="col-lg-3">
-                    <p> Phone: <a>+94 112 330 375</a> <br>Phone: <a>+94 770 834 004 </a></p>
+                <div class="col-lg-3 custom">
+                    <p> Mobile: +94 773 996 599
+                        <br>Fax : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+94 114 921 986
+                    </p>
 
                 </div>
-                <div class="col-lg-3">
-                    <p>Email: <a href="mailto:shivamicroworld@gmail.com">info@microworld.lk</a><br>
-                        Web: <a href="http://www.microworld.lk"  target="_parent">www.microworld.lk</a></p>
+                <div class="col-lg-3 custom">
+                    <p>Email: <a href="">sales@adsports.lk</a><br>
+                        Web: <a>www.adsports.lk</a></p>
                 </div>
             </div>
 
@@ -41,14 +36,7 @@
 
 
         </div>
-        <!-- <div class="col-lg-2 footer_social" style="padding-top:2%;" >
-         <a class="social-i "><i class="fa fa-2x fa-facebook-square"></i></a><span class="line">  </span>
-         <a class="social-i">
-                    <i class="fa fa-2x  fa-twitter-square"></i> </a><span class="line">  </span>
-                    <a class="social-i">
-                    <a class="social-i"><i class="fa fa-2x  fa-twitter-square"></i> </a><span class="line">  </span>
-         </div>
-        -->
+
     </div>
 </section>
 <!--//custom footer -->
@@ -60,16 +48,22 @@
 <div class="footer-bottom-block ">
     <div class=" container">
         <div class="row">
-            <div class="col-sm-5 copyright-text"> &copy; 2016 Microworld. All Rights Reserved. | Powered By
-                <a target="_blank" href="http://www.itmart.lk" style="color:#FFF;">ITMARTX</a> </div>
+            <div class="col-sm-5 copyright-text"> © 2017 AD Sports. All Rights Reserved. | Powered By
+                <a href="http://www.itmart.lk" style="color:#FFF;">ITMARTX</a> </div>
             <div class="col-sm-7">
                 <nav class="footer-nav col-lg-12">
-                    <a style="padding-right:0px;" href="<?= base_url('Contact-Us') ?>">Contact Us</a>
-                    <a href="<?= base_url('Services') ?>">Services</a>
-                    <a href="<?= base_url('Packages') ?>">Packages</a>
-                    <a href="<?= base_url('About-Us') ?>">About us</a>
-                    <a href="<?= base_url('Products') ?>">Products</a>
-                    <a href="<?= base_url('Home') ?>">Home</a>
+                    <a style="padding-right:0px;">Contact Us</a>
+                    <a >Garments</a>
+                    <a>Special Offers</a>
+                    <a>Brands</a>
+                    <a>Products</a>
+                    <a>About Us</a>
+                    <a >Home</a>
+
+
+
+
+
                 </nav>
             </div>
             <!--Back To Top-->
@@ -77,6 +71,9 @@
 
         </div>
     </div>
-</div>
 
-<!-- /Footer Bottom Container -->
+    <!-- /Footer Bottom Container -->
+
+
+</div>
+<!-- //end Footer Container -->
