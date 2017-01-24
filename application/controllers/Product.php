@@ -308,9 +308,13 @@ class Product extends Front_Controller
 
 //        p($ProductId);
 
-        $d['details']=$this->product->join('category')->join('sub_category')
-        ->fields("{$this->product->table()}.* , CategoryTitle,SubCategoryTitle ")
-        ->get_by(['ProductId' => $ProductId]);
+//        $d['details']=$this->product->join('category')->join('sub_category')
+//        ->fields("{$this->product->table()}.* , CategoryTitle,SubCategoryTitle ")
+//        ->get_by(['ProductId' => $ProductId]);
+
+        $d['details'] = $this->product->get($ProductId);
+
+//        p($this->db->last_query());
 
         $d['related_products'] = $this->product->limit(5)->order_by('rand()')->get_many_by(['CategoryId' => $d['details']->CategoryId]);
 
@@ -321,7 +325,7 @@ class Product extends Front_Controller
 
         $d['main_cate']=' <li><a href="'.base_url('Products/').url_title($d['one_category']->CategoryTitle).'/'.$d['one_category']->CategoryId .'"> '.$d['one_category']->CategoryTitle.' </a></li>';
 
-        if($d['details']->SubCategoryTitle != null){
+        if($d['details']->SubCategoryId != 0){
             $d['main_cate_sub']=' <li><a href="'.base_url('Product/').url_title($d['one_category']->CategoryTitle).'/'.url_title($d['one_sub_category']->SubCategoryTitle) .'/'.$d['one_sub_category']->SubCategoryId.'"> '.$d['one_sub_category']->SubCategoryTitle.' </a></li>';
         }else{
             $d['main_cate_sub']=' ';

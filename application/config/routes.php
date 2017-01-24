@@ -86,6 +86,8 @@ $route['Products/(:num)'] = 'product/product_index/$1';
 $route['Products'] = 'product/product_index';
 
 
+$route['Special-Offers'] = 'home/special';
+
 //$route['Ongoing-Projects'] = 'Onproject/index';
 //$route['Ongoing-Projects/(.+)'] = 'Onproject/index/$1';
 //

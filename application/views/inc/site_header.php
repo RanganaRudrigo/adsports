@@ -72,10 +72,26 @@
                                                 <a href="#" class="clearfix">About Us</a>
 
                                             </li>
-                                            <li class="with-sub-menu hover">
-                                                <p class="close-menu"></p>
-                                                <a href="#" class="clearfix">Products</a>
+                                            <li class="with-sub-menu hover"><a href="<?= base_url('Products') ?>"
+                                                                               class="clearfix"> produts
+                                                    <div class="caret"></div>
+                                                </a>
 
+                                                <div class="sub-menu" style="width: 40%; ">
+                                                    <div class="content">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="row-list">
+                                                                    <?php foreach ($categories_menu as $k => $category_list): ?>
+                                                                        <li><a class="subcategory_item"
+                                                                               href="<?= base_url('Products/') . url_title($category_list->CategoryTitle) . '/' . $category_list->CategoryId ?>">                                                                            <?= $category_list->CategoryTitle ?>                                                                        </a>
+                                                                        </li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </li>
                                             <li class="with-sub-menu hover">
                                                 <p class="close-menu"></p>
@@ -166,145 +182,39 @@
                                     <div class="megamenu-pattern">
                                         <div class="container">
                                             <ul class="megamenu">
-                                                <li class="item-vertical style1 with-sub-menu hover">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="<?= base_url('media/images/') ?>side-icon1.png" alt="icon">
-                                                        <span>Cricket Sport Items</span>
-                                                        <b class="caret"></b>
-
-                                                    </a>
-
-                                                </li>
-                                                <li class="item-vertical">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="<?= base_url('media/images/') ?>side-icon2.png" alt="icon">
-                                                        <span>Safety Items</span>
-
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical with-sub-menu hover">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-
-                                                        <img src="<?= base_url('media/images/') ?>side-icon3.png" alt="icon">
-                                                        <span>Customized Caps</span>
-                                                        <b class="caret"></b>
-                                                    </a>
-
-                                                </li>
-                                                <li class="item-vertical with-sub-menu hover">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="<?= base_url('media/images/') ?>side-icon8.png" alt="icon">
-                                                        <span>Bottoms For Promotions</span>
-                                                        <b class="caret"></b>
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical css-menu with-sub-menu hover">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-
-                                                        <img src="<?= base_url('media/images/') ?>side-icon9.png" alt="icon">
-                                                        <span>Customized T-shirts</span>
-                                                        <b class="caret"></b>
-                                                    </a>
-                                                    <!--<div class="sub-menu" data-subwidth="30" style="width: 270px; display: none; right: 0px;">
-                                                        <div class="content" style="display: none;">
-                                                            <div class="row">
-                                                                <div class="col-sm-12">
+                                                <?php foreach ($menu as $k => $category): ?>
+                                                    <li class="item-vertical style1 with-sub-menu hover"><p
+                                                            class="close-menu"></p><a
+                                                            href="<?= base_url('Products/') . url_title($category->CategoryTitle) . '/' . $category->CategoryId ?>"
+                                                            class="clearfix"> <img
+                                                                src="<?= base_url('media/images/') ?>sport2.png" alt="icon">
+                                                            <span> <?= $category->CategoryTitle ?></span> <?php if (count($category->sub) > 0) { ?>
+                                                                <b class="caret"></b>                                                        <?php } ?>
+                                                        </a> <?php if (count($category->sub) > 0) { ?>
+                                                            <div class="sub-menu" data-subwidth="30"
+                                                                 style="width: 270px; display: none; right: 0px;">
+                                                                <div class="content" style="display: none;">
                                                                     <div class="row">
-                                                                        <div class="col-sm-12 hover-menu">
-                                                                            <div class="menu">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="#" class="main-menu">Headphones, Headsets</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#" class="main-menu">Home Audio</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#" class="main-menu">Health &amp; Beauty</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#" class="main-menu">Helicopters &amp; Parts</a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#" class="main-menu">Helicopters &amp; Parts</a>
-                                                                                    </li>
-                                                                                </ul>
+                                                                        <div class="col-sm-12">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12 hover-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>                                                                                    <?php foreach ($category->sub as $k => $sub): ?>
+                                                                                                <li>
+                                                                                                    <a href="<?= base_url('Product/') . url_title($category->CategoryTitle) . '/' . url_title($sub->SubCategoryTitle) . '/' . $sub->SubCategoryId ?>"
+                                                                                                       class="main-menu">                                                                                            <?= $sub->SubCategoryTitle ?>                                                                                        </a>
+                                                                                                </li>                                                                                    <?php endforeach; ?>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-                                                </li>
-                                                <li class="item-vertical">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="<?= base_url('media/images/') ?>side-icon5.png" alt="icon">
-                                                        <span>Other Sports Items</span>
-
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="<?= base_url('media/images/') ?>side-icon7.png" alt="icon">
-                                                        <span>Bags</span>
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="<?= base_url('media/images/') ?>side-icon3.png" alt="icon">
-                                                        <span>Other </span>
-                                                    </a>
-                                                </li>
-                                                <li class="loadmore">
-                                                    <i class="fa fa-plus-square-o"></i>
-                                                    <span class="more-view">More Categories</span>
-                                                </li>
-                                                <!--
-
-
-                                                <li class="item-vertical" style="display: none;">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="image/side-icon3.png" alt="icon">
-                                                        <span>Outdoor &amp; Other</span>
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical" style="display: none;">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="image/side-icon3.png" alt="icon">
-                                                        <span>Outdoor &amp; Other</span>
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical" style="display: none;">
-                                                    <p class="close-menu"></p>
-                                                    <a href="#" class="clearfix">
-                                                        <img src="image/side-icon3.png" alt="icon">
-                                                        <span>Outdoor &amp; Traveling Supplies</span>
-                                                    </a>
-                                                </li>
-                                                <li class="item-vertical" style="display: none;">
-                                                    <p class="close-menu"></p>
-
-                                                    <a href="#" class="clearfix">
-                                                        <img src="image/theme/icons/13.png" alt="icon">
-                                                        <span>More Car Accessories</span>
-                                                    </a>
-                                                </li>
-                                                <li class="loadmore">
-                                                    <i class="fa fa-plus-square-o"></i>
-                                                    <span class="more-view">More Categories</span>
-                                                </li>
-                                                -->
+                                                            </div>                                                    <?php } ?>
+                                                    </li>                                                <?php endforeach; ?>
+                                                <li class="loadmore"><i class="fa fa-plus-square-o"></i> <span
+                                                        class="more-view">More Categories</span></li>
                                             </ul>
                                         </div>
                                     </div>

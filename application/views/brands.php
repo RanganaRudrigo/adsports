@@ -38,7 +38,7 @@
                     <!--changed listings-->
                     <div class="products-list row list">
 
-                        <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
                             <div class="product-item-container">
                                 <div class="left-block">
                                     <div class="product-image-container lazy second_img ">
@@ -57,7 +57,7 @@
                                 </div><!-- right block -->
                             </div>
                         </div>
-                        <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
                             <div class="product-item-container">
                                 <div class="left-block">
                                     <div class="product-image-container lazy second_img ">
@@ -76,7 +76,7 @@
                                 </div><!-- right block -->
                             </div>
                         </div>
-                        <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
                             <div class="product-item-container">
                                 <div class="left-block">
                                     <div class="product-image-container lazy second_img ">
@@ -95,7 +95,161 @@
                                 </div><!-- right block -->
                             </div>
                         </div>
-                        <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                            <div class="product-item-container">
+                                <div class="left-block">
+                                    <div class="product-image-container lazy second_img ">
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e11.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        <img data-src="<?= base_url('media/images/') ?>demo/shop/product/e12.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                    </div>
+                                    <!--full quick view block-->
+                                    <a class="quickview  visible-lg"   href="">  view</a>
+                                    <!--end full quick view block-->
+                                </div>
+
+                                <div class="right-block">
+                                    <div class="caption">
+                                        <h4><a href="product.html">Apple Cinema 30&quot;</a></h4>
+                                    </div>
+                                </div><!-- right block -->
+                            </div>
+                        </div>
+                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
                             <div class="product-item-container">
                                 <div class="left-block">
                                     <div class="product-image-container lazy second_img ">

@@ -31,7 +31,7 @@ class Front_Controller extends CI_Controller
 
         $this->load->model('Category_model', 'category');
         $data['categories'] = $this->category->order_by("Order", "ASC")->get_all();
-        $data['categories_menu'] = $this->category->order_by("Order", "ASC")->limit(6)->get_all();
+        $data['categories_menu'] = $this->category->order_by("Order", "ASC")->get_all();
 
 
 

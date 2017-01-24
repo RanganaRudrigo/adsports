@@ -190,9 +190,9 @@ class Home extends Front_Controller
         $this->view('brands');
     }
 
-    public function network()
+    public function special()
     {
-        $this->view('network');
+        $this->view('special');
     }
 
     public function business()
