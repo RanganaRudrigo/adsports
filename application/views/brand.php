@@ -17,8 +17,8 @@
     <div class="main-container container">
         <ul class="breadcrumb">
             <li><a href="<?= base_url('Home') ?>"><i class="fa fa-home"></i></a></li>
-            <li><a >Brands</a></li>
 
+            <li><a >Brands One</a></li>
 
         </ul>
 
@@ -26,7 +26,7 @@
 
             <!--Middle Part Start-->
             <div id="content" class="col-md-12 col-sm-12">
-                <h3 class="offset_title">All Brands</h3>
+                <h3 class="offset_title">Featured Products</h3>
                 <div class="products-category">
 
 
@@ -38,50 +38,54 @@
                     <!--changed listings-->
                     <div class="products-list row list">
 
-                        <?php foreach ($brands as $i=> $brand): ?>
+                        <?php foreach ($products as $product): ?>
 
-                        <div class="product-layout col-md-2 col-sm-4 col-xs-12 ">
+                        <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
                             <div class="product-item-container">
                                 <div class="left-block">
                                     <div class="product-image-container lazy second_img ">
-                                        <img data-src="<?= UP.$brand->Image; ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="" class="img-responsive" />
-                                        <img data-src="<?= UP.$brand->Image; ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"  alt="<?= $brand->BrandTitle; ?>" class="img_0 img-responsive" />
+                                        <img data-src="<?= UP.$product->Image ?>" class="img-responsive" />
+                                        <img data-src="<?= UP.$product->Image ?>" class="img_0 img-responsive" />
                                     </div>
-                                    <!--full quick view block-->
-                                    <a class="quickview  visible-lg"   href="<?= base_url().'Brand/'.url_title($brand->BrandTitle).'/'.$brand->BrandId?>">  view</a>
-                                    <!--end full quick view block-->
                                 </div>
-
                                 <div class="right-block">
                                     <div class="caption">
                                         <h4>
-                                            <a href="<?= base_url().'Brand/'.url_title($brand->BrandTitle).'/'.$brand->BrandId?>">
-                                                <?= $brand->BrandTitle; ?>
+                                            <a href="<?= base_url().'Product-Details/'.url_title($product->ProductTitle).'/'.$product->ProductId?>">
+                                                <?= $product->ProductTitle ?>
                                             </a>
                                         </h4>
                                     </div>
-                                </div><!-- right block -->
+                                    <div class="button-group">
+                                        <a href="<?= base_url().'Product-Details/'.url_title($product->ProductTitle).'/'.$product->ProductId?>" class="addToCart" type="button" data-toggle="tooltip" title="Read More" >
+                                            <i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Read More</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-
                         <?php endforeach; ?>
 
-
-                    </div>				<!--// End Changed listings-->
+                    </div>					<!--// End Changed listings-->
                     <!-- Filters -->
-                    <!--<div class="product-filter product-filter-bottom filters-panel" >
+                    <div class="product-filter product-filter-bottom filters-panel" >
                         <div class="row">
                             <div class="col-md-2 hidden-sm hidden-xs">
 
                             </div>
                             <div class="short-by-show text-center col-md-7 col-sm-8 col-xs-12">
-                                <div class="form-group" style="margin: 7px 10px">Showing 1 to 9 of 10 (2 Pages)</div>
+                                <div class="form-group" style="margin: 7px 10px">Showing <?= $total_count ?> (<?= $pages ?> Pages)</div>
                             </div>
-                            <div class="box-pagination col-md-3 col-sm-4 text-right"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="http://localhost/ytc_templates/opencart/so_market/index.html?route=product/category&amp;path=33&amp;page=2">2</a></li><li><a href="http://localhost/ytc_templates/opencart/so_market/index.html?route=product/category&amp;path=33&amp;page=2">&gt;</a></li><li><a href="http://localhost/ytc_templates/opencart/so_market/index.html?route=product/category&amp;path=33&amp;page=2">&gt;|</a></li></ul></div>
+                            <div class="box-pagination col-md-3 col-sm-4 text-right">
+                                <ul class="pagination">
+                                    <?= $links; ?>
+
+                                </ul>
+                            </div>
 
                         </div>
-                    </div>-->
+                    </div>
                     <!-- //end Filters -->
 
                 </div>

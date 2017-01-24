@@ -22,7 +22,7 @@ class Home extends Front_Controller
         $this->load->model('Channel_Tag_model', 'chanellTag');
         $this->load->model('Channel_model', 'channel');
         $this->load->model('Iptv_model', 'iptv');
-//        $this->load->model('Advertisement_model', 'addz');
+
 
 
     }
@@ -185,10 +185,7 @@ class Home extends Front_Controller
         $this->view('about_us');
     }
 
-    public function brands()
-    {
-        $this->view('brands');
-    }
+
 
     public function special()
     {

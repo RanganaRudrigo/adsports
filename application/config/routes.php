@@ -62,7 +62,9 @@ $route['Packages'] = 'Home/packages';
 //$route['IP-Tv'] = 'Home/iptv';
 //$route['Package-Details/(.+)/(.+)/(:num)'] = 'Home/package_details/$3';
 
-$route['Brands'] = 'Home/brands';
+$route['Brand/(.+)/(:num)/(:num)'] = 'brand/brand_category/$2';
+$route['Brand/(.+)/(:num)'] = 'brand/brand_category/$2';
+$route['Brands'] = 'brand/index';
 //$route['Foreign-Principals'] = 'Home/foreign_principals';
 //$route['Vacancies'] = 'Vacancies/index';
 //$route['Vacancy-Details/(.+)/(.+)'] = 'Vacancies/details/$2';
