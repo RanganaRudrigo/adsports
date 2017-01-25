@@ -64,12 +64,12 @@
 
                                             <li class=" hover home">
                                                 <p class="close-menu"></p>
-                                                <a href="#" class="clearfix">Home</a>
+                                                <a href="<?= base_url('Home') ?>" class="clearfix">Home</a>
 
                                             </li>
                                             <li class=" hover">
                                                 <p class="close-menu"></p>
-                                                <a href="#" class="clearfix">About Us</a>
+                                                <a href="<?= base_url('About-Us') ?>" class="clearfix">About Us</a>
 
                                             </li>
                                             <li class="with-sub-menu hover"><a href="<?= base_url('Products') ?>"
@@ -95,23 +95,50 @@
                                             </li>
                                             <li class="with-sub-menu hover">
                                                 <p class="close-menu"></p>
-                                                <a href="#" class="clearfix">Brands</a>
+                                                <a href="<?= base_url('Brands') ?>" class="clearfix">Brands</a>
 
                                             </li>
 
                                             <li class="with-sub-menu hover">
                                                 <p class="close-menu"></p>
-                                                <a href="#" class="clearfix">Special Offers</a>
+                                                <a href="<?= base_url('Special-Offers') ?>" class="clearfix">Special Offers</a>
 
                                             </li>
-                                            <li class="">
-                                                <p class="close-menu"></p>
-                                                <a href="" class="clearfix">Garments</a>
+
+
+                                            <li class="with-sub-menu hover"><a href="javascript:"
+                                                                               class="clearfix"> Garments
+                                                    <div class="caret"></div>
+                                                </a>
+
+                                                <div class="sub-menu" style="width: 40%; ">
+                                                    <div class="content">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <ul class="row-list">
+
+                                                                        <li>
+                                                                            <a class="subcategory_item" href="<?= base_url('Garments') ?>/Promotional-Item/1">
+                                                                                Promotional Item
+                                                                            </a>
+                                                                        </li>
+                                                                    <li>
+                                                                            <a class="subcategory_item" href="<?= base_url('Garments') ?>/Sport-Item/2">
+                                                                                Sport Item
+                                                                            </a>
+                                                                        </li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </li>
+
 
                                             <li class="">
                                                 <p class="close-menu"></p>
-                                                <a href="#" class="clearfix">Contact Us</a>
+                                                <a href="<?= base_url('Contact-Us') ?>" class="clearfix">Contact Us</a>
                                             </li>
                                         </ul>
 

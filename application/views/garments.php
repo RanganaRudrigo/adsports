@@ -17,7 +17,9 @@
     <div class="main-container container">
         <ul class="breadcrumb">
             <li><a href="<?= base_url('Home') ?>"><i class="fa fa-home"></i></a></li>
-            <li><a >Special Offers</a></li>
+            <li><a >Garments</a></li>
+            <li> <a > <?= ($this->uri->segment(3) == '1') ? 'Promotional Item' : 'Sport Item';   ?> </a> </li>
+
 
 
         </ul>
@@ -51,17 +53,14 @@
                                     <div class="right-block">
                                         <div class="caption">
                                             <h4>
-                                                <a href="<?= base_url().'Special-Offer-Details/'.url_title($product->OfferProductTitle).'/'.$product->OfferId?>">
-                                                    <?= $product->OfferProductTitle ?>
+                                                <a href="<?= base_url().'Garment/'.url_title($product->ProductTitle).'/'.$product->GarmentId?>">
+                                                    <?= $product->ProductTitle ?>
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div class="price">
-                                            <span class="price-new">LKR <?= $product->PriceRangeFrom ?></span>
 
-                                        </div>
                                         <div class="button-group">
-                                            <a href="<?= base_url().'Special-Offer-Details/'.url_title($product->OfferProductTitle).'/'.$product->OfferId?>" class="addToCart" type="button" data-toggle="tooltip" title="Read More" >
+                                            <a href="<?= base_url().'Garment/'.url_title($product->ProductTitle).'/'.$product->GarmentId?>" class="addToCart" type="button" data-toggle="tooltip" title="Read More" >
                                                 <i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Read More</span>
                                             </a>
                                         </div>

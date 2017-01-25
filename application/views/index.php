@@ -119,429 +119,55 @@
                                     <span class="ltabs-tab-selected"></span> <span class="ltabs-tab-arrow">?</span>
                                     <div class="item-sub-cat">
                                         <ul class="ltabs-tabs cf">
-                                            <li class="ltabs-tab tab-sel" data-category-id="20" data-active-content=".items-category-20"> <span class="ltabs-tab-label">Sport Goods						</span> </li>
-                                            <li class="ltabs-tab " data-category-id="18" data-active-content=".items-category-18"> <span class="ltabs-tab-label">Sports Wears	</span> </li>
-                                            <li class="ltabs-tab " data-category-id="25" data-active-content=".items-category-25"> <span class="ltabs-tab-label">Watches</span> </li>
+                                            <?php foreach ($our_product_1 as $i=> $pro1): ?>
+                                                <li class="ltabs-tab <?= ($i == 0) ? 'tab-sel' : ''; ?>" data-category-id="<?= $pro1->CategoryId; ?>" data-active-content=".items-category-<?= $pro1->CategoryId; ?>"> <span class="ltabs-tab-label"> <?= $pro1->CategoryTitle; ?></span> </li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
                                 </div>
                                 <!-- End Tabs-->
                             </div>
-                            <div class="ltabs-items-container">
+                            <div class="ltabs-items-container" >
                                 <!--Begin Items-->
-                                <div class="ltabs-items ltabs-items-selected items-category-20 grid" data-total="10">
-                                    <div class="ltabs-items-inner ltabs-slider ">
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>J9.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>J9.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block  text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
+                                <?php foreach ($our_product_1 as $i=> $pro1): ?>
 
 
+                                    <div class="ltabs-items <?= ($i == 0) ? ' ltabs-items-selected' : ''; ?> items-category-<?= $pro1->CategoryId; ?> grid" data-total="10">
+                                        <div class="ltabs-items-inner ltabs-slider ">
 
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>m1.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>m1.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--New Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name	</a></h4>
-                                                        <div class="ratings">
+                                            <?php foreach ($pro1->product as $val): ?>
+                                                <div class="ltabs-item product-layout">
+                                                    <div class="product-item-container">
+                                                        <div class="left-block">
+                                                            <div class="product-image-container second_img ">
+                                                                <img src="<?= UP.$val->Image ?>"   class="img-responsive" />
+                                                                <img src="<?= UP.$val->Image ?>"   class="img_0 img-responsive" />
+                                                            </div>
 
                                                         </div>
+                                                        <div class="right-block">
+                                                            <div class="caption">
+                                                                <h4><a href="<?= base_url().'Product-Details/'.url_title($val->ProductTitle).'/'.$val->ProductId?>">
+                                                                        <?= $val->ProductTitle ?></a></h4>
+                                                            </div>
 
+                                                            <div class="button-group">
+                                                                <a href="<?= base_url().'Product-Details/'.url_title($val->ProductTitle).'/'.$val->ProductId?>" class="addToCart" type="button" data-toggle="tooltip" title="Read More" >
+                                                                    <i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Read More</span>
+                                                                </a>
 
+                                                            </div>
+                                                        </div><!-- right block -->
                                                     </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
                                                 </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
+                                            <?php endforeach; ?>
 
 
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>w1.jpg"  alt="" class="img-responsive" />
-                                                        <img src="i<?= base_url('media/images/') ?>w1.jpg"  alt="" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="ltabs-items items-category-18 grid" data-total="11">
-                                    <div class="ltabs-items-inner ltabs-slider ">
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>e11.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>e11.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href=""> Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>35.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>35.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>E3_1.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>E3_1.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">HP LP3065</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
                                         </div>
 
                                     </div>
+                                <?php endforeach; ?>
 
-                                </div>
-                                <div class="ltabs-items  items-category-25 grid" data-total="11">
-                                    <div class="ltabs-items-inner ltabs-slider ">
-
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>w1.jpg"  alt="" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>w1.jpg"  alt="" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
                             </div>
                             <!--End Items-->
 
@@ -569,9 +195,9 @@
                                     <span class="ltabs-tab-selected">Sports Goods	</span> <span class="ltabs-tab-arrow">?</span>
                                     <div class="item-sub-cat">
                                         <ul class="ltabs-tabs cf">
-                                            <li class="ltabs-tab tab-sel" data-category-id="1" data-active-content=".items-category-1"> <span class="ltabs-tab-label">Sports Wear						</span> </li>
-                                            <li class="ltabs-tab " data-category-id="2" data-active-content=".items-category-2"> <span class="ltabs-tab-label">Watches	</span> </li>
-
+                                            <?php foreach ($our_product_2 as $k=> $pro2): ?>
+                                                <li class="ltabs-tab <?= ($k == 0) ? 'tab-sel' : ''; ?>" data-category-id="<?= $pro2->CategoryId; ?>" data-active-content=".items-category-<?= $pro2->CategoryId; ?>"> <span class="ltabs-tab-label"> <?= $pro2->CategoryTitle; ?></span> </li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -579,431 +205,44 @@
                             </div>
                             <div class="ltabs-items-container">
                                 <!--Begin Items-->
-                                <div class="ltabs-items  ltabs-items-selected items-category-1 grid" data-total="10">
-                                    <div class="ltabs-items-inner ltabs-slider ">
+                                <?php foreach ($our_product_2 as $k=> $pro2): ?>
+                                    <div class="ltabs-items  <?= ($k == 0) ? ' ltabs-items-selected' : ''; ?> items-category-<?= $pro2->CategoryId; ?> grid" data-total="10">
+                                        <div class="ltabs-items-inner ltabs-slider ">
+                                            <?php foreach ($pro2->product2 as $val2): ?>
+                                                <div class="ltabs-item product-layout">
+                                                    <div class="product-item-container">
+                                                        <div class="left-block">
+                                                            <div class="product-image-container second_img ">
+                                                                <img src="<?= UP.$val2->Image ?>"  alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                                                <img src="<?= UP.$val2->Image ?>"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                                            </div>
 
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
+                                                        </div>
+                                                        <div class="right-block">
+                                                            <div class="caption">
+                                                                <h4 class="text-center">
+                                                                    <a href="<?= base_url().'Product-Details/'.url_title($val2->ProductTitle).'/'.$val2->ProductId?>">
+                                                                        <?= $val2->ProductTitle; ?>
+                                                                    </a>
+                                                                </h4>
+
+                                                            </div>
+
+                                                            <div class="button-group " style="margin-left:2%;" >
+                                                                <a href="<?= base_url().'Product-Details/'.url_title($val2->ProductTitle).'/'.$val2->ProductId?>" class="addToCart" type="button" data-toggle="tooltip" title="Read More" >
+                                                                    <i class="fa fa-shopping-cart"></i> <span class="hidden-xs">Read More</span>
+                                                                </a>
+
+                                                            </div>
+                                                        </div><!-- right block -->
                                                     </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
                                                 </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-                                                        <div class="price">
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>w1.jpg"   class="img-responsive" />
-                                                        <img src="i<?= base_url('media/images/') ?>w1.jpg"   class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Dail Lulpa</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-                                                        <div class="price">
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-                                                        <div class="price">
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>J9.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>J9.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>m1.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>m1.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--New Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Sport Shoes	</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="ltabs-items  items-category-2 grid" data-total="11">
-
-                                    <div class="ltabs-items-inner ltabs-slider ">
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>e11.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>e11.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href=""> Canon EOS 5D</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>35.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>35.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>E3_1.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>E3_1.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">HP LP3065</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
+                                            <?php endforeach; ?>
                                         </div>
 
                                     </div>
+                                <?php endforeach; ?>
 
-                                </div>
-                                <div class="ltabs-items items-category-3 grid" data-total="11">
-                                    <div class="ltabs-items-inner ltabs-slider ">
-
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>141.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>w1.jpg"   class="img-responsive" />
-                                                        <img src="i<?= base_url('media/images/') ?>w1.jpg"   class="img_0 img-responsive" />
-                                                    </div>
-                                                    <!--Sale Label-->
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                        <div class="ltabs-item product-layout">
-                                            <div class="product-item-container">
-                                                <div class="left-block">
-                                                    <div class="product-image-container second_img ">
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img-responsive" />
-                                                        <img src="<?= base_url('media/images/') ?>B10.jpg"  alt="Apple Cinema 30&quot;" class="img_0 img-responsive" />
-                                                    </div>
-
-                                                    <!--full quick view block-->
-                                                    <a class="quickview iframe-link visible-lg" data-fancybox-type="iframe"  href="">  Quickview</a>
-                                                    <!--end full quick view block-->
-                                                </div>
-                                                <div class="right-block text-center">
-                                                    <div class="caption">
-                                                        <h4><a href="">Product Name</a></h4>
-                                                        <div class="ratings">
-
-                                                        </div>
-
-                                                        <div class="price">
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="button-group">
-                                                        <button class="addToCart" type="button" data-toggle="tooltip" title="View More" ><i class="fa fa-shopping-cart"></i> <span class="">View More</span></button>
-
-
-                                                    </div>
-                                                </div><!-- right block -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
                             </div>
                             <!--End Items-->
 
@@ -1020,97 +259,24 @@
                 <div class="module latest-product titleLine">
                     <h3 class="modtitle">Latest Product</h3>
                     <div class="modcontent ">
-                        <div class="product-latest-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#"><img src="<?= base_url('media/images/') ?>m1.jpg" alt="Product Name" title="Product Name" class="img-responsive" style="width: 100px; height: 82px;"></a>
-                                </div>
-                                <div class="media-body">
-                                    <div class="caption">
-                                        <h4><a href="#">Product Name</a></h4>
+                        <?php foreach ( $related_products as $related_product): ?>
 
-                                        <div class="price">
-
-                                        </div>
-                                        <div class="ratings">
-                                            <div class="rating-box">
-
-                                            </div>
-                                        </div>
+                            <div class="product-latest-item">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="<?= base_url().'Product-Details/'.url_title($related_product->ProductTitle).'/'.$related_product->ProductId?>">
+                                            <img src="<?=UP.$related_product->Image?>"  class="img-responsive" style="width: 100px; height: 82px;"></a>
                                     </div>
+                                    <div class="media-body">
+                                        <div class="caption">
+                                            <h4><a href="<?= base_url().'Product-Details/'.url_title($related_product->ProductTitle).'/'.$related_product->ProductId?>"> <?= $related_product->ProductTitle ?></a></h4>
 
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-latest-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#"><img src="<?= base_url('media/images/') ?>m2.jpg" alt="Product Name" title="Product Name" class="img-responsive" style="width: 100px; height: 82px;"></a>
-                                </div>
-                                <div class="media-body">
-                                    <div class="caption">
-                                        <h4><a href="#">Product Name</a></h4>
-
-                                        <div class="price">
-
-                                        </div>
-                                        <div class="ratings">
-                                            <div class="rating-box">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-latest-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#"><img src="<?= base_url('media/images/') ?>18.jpg" alt="Product Name" title="Product Name" class="img-responsive" style="width: 100px; height: 82px;"></a>
-                                </div>
-                                <div class="media-body">
-                                    <div class="caption">
-                                        <h4><a href="#">Product Name</a></h4>
-
-                                        <div class="price">
-
-                                        </div>
-                                        <div class="ratings">
-                                            <div class="rating-box">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-latest-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#"><img src="<?= base_url('media/images/') ?>m1.jpg" alt="Product Name" title="Product Name" class="img-responsive" style="width: 100px; height: 82px;"></a>
-                                </div>
-                                <div class="media-body">
-                                    <div class="caption">
-                                        <h4><a href="#">Product Name</a></h4>
-
-                                        <div class="price">
-
-                                        </div>
-                                        <div class="ratings">
-                                            <div class="rating-box">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
+                        <?php endforeach; ?>
                     </div>
 
                 </div>
@@ -1200,5 +366,105 @@
 <!-- End Preloading Screen -->
 
 <?php $this->view('inc/footer_js.php'); ?>
+<?php foreach ($our_product_1 as $i=> $pro1): ?>
+    <script>
+        $(document).ready(function($) {
+            var $tag_id = $('#so_listing_tabs_3'),
+                parent_active = $('.items-category-<?= $pro1->CategoryId; ?>', $tag_id),
+                total_product = parent_active.data('total'),
+                tab_active = $('.ltabs-items-inner', parent_active),
+                nb_column0 = 3,
+                nb_column1 = 2,
+                nb_column2 = 2,
+                nb_column3 = 1,
+                nb_column4 = 1;
+            tab_active.owlCarousel2({
+                nav: true,
+                dots: false,
+                margin: 25,
+                loop: false,
+                autoplay: false,
+                autoplayHoverPause: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 5000,
+                navRewind: true,
+                navText: ['', ''],
+                responsive: {
+                    0: {
+                        items: nb_column4,
+                        nav: total_product <= nb_column4 ? false : ((true) ? true : false),
+                    },
+                    480: {
+                        items: nb_column3,
+                        nav: total_product <= nb_column3 ? false : ((true) ? true : false),
+                    },
+                    768: {
+                        items: nb_column2,
+                        nav: total_product <= nb_column2 ? false : ((true) ? true : false),
+                    },
+                    992: {
+                        items: nb_column1,
+                        nav: total_product <= nb_column1 ? false : ((true) ? true : false),
+                    },
+                    1200: {
+                        items: nb_column0,
+                        nav: total_product <= nb_column0 ? false : ((true) ? true : false),
+                    },
+                }
+            });
+        });
+    </script>
+
+<?php endforeach; ?>
+<?php foreach ($our_product_2 as $k=> $pro2): ?>
+    <script>
+        $(document).ready(function($) {
+            var $tag_id = $('#so_listing_tabs_4'),
+                parent_active = $('.items-category-<?= $pro2->CategoryId; ?>', $tag_id),
+                total_product = parent_active.data('total'),
+                tab_active = $('.ltabs-items-inner', parent_active),
+                nb_column0 = 3,
+                nb_column1 = 2,
+                nb_column2 = 2,
+                nb_column3 = 1,
+                nb_column4 = 1;
+            tab_active.owlCarousel2({
+                nav: true,
+                dots: false,
+                margin: 25,
+                loop: false,
+                autoplay: false,
+                autoplayHoverPause: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 5000,
+                navRewind: true,
+                navText: ['', ''],
+                responsive: {
+                    0: {
+                        items: nb_column4,
+                        nav: total_product <= nb_column4 ? false : ((true) ? true : false),
+                    },
+                    480: {
+                        items: nb_column3,
+                        nav: total_product <= nb_column3 ? false : ((true) ? true : false),
+                    },
+                    768: {
+                        items: nb_column2,
+                        nav: total_product <= nb_column2 ? false : ((true) ? true : false),
+                    },
+                    992: {
+                        items: nb_column1,
+                        nav: total_product <= nb_column1 ? false : ((true) ? true : false),
+                    },
+                    1200: {
+                        items: nb_column0,
+                        nav: total_product <= nb_column0 ? false : ((true) ? true : false),
+                    },
+                }
+            });
+        });
+    </script>
+
+<?php endforeach; ?>
 </body>
 </html>

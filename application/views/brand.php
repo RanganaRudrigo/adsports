@@ -18,7 +18,8 @@
         <ul class="breadcrumb">
             <li><a href="<?= base_url('Home') ?>"><i class="fa fa-home"></i></a></li>
 
-            <li><a >Brands One</a></li>
+            <li><a href="<?= base_url('Brands') ?>">Brands</a></li>
+            <?= $main_cate ?>
 
         </ul>
 

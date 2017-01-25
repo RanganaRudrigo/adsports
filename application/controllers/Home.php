@@ -187,10 +187,7 @@ class Home extends Front_Controller
 
 
 
-    public function special()
-    {
-        $this->view('special');
-    }
+
 
     public function business()
     {

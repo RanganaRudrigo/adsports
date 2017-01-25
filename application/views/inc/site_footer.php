@@ -48,17 +48,17 @@
 <div class="footer-bottom-block ">
     <div class=" container">
         <div class="row">
-            <div class="col-sm-5 copyright-text"> © 2017 AD Sports. All Rights Reserved. | Powered By
-                <a href="http://www.itmart.lk" style="color:#FFF;">ITMARTX</a> </div>
+            <div class="col-sm-5 copyright-text"> &copy; <?= date('Y') ?> AD Sports. All Rights Reserved. | Powered By
+                <a href="http://www.itmart.lk" style="color:#FFF;" target="_blank">ITMARTX</a> </div>
             <div class="col-sm-7">
                 <nav class="footer-nav col-lg-12">
-                    <a style="padding-right:0px;">Contact Us</a>
-                    <a >Garments</a>
-                    <a>Special Offers</a>
-                    <a>Brands</a>
-                    <a>Products</a>
-                    <a>About Us</a>
-                    <a >Home</a>
+                    <a style="padding-right:0px;" href="<?= base_url('Contact-Us') ?>">Contact Us</a>
+                    <a href="<?= base_url('Garments/Sport-Item/2') ?>">Garments</a>
+                    <a href="<?= base_url('Special-Offers') ?>">Special Offers</a>
+                    <a href="<?= base_url('Brands') ?>">Brands</a>
+                    <a href="<?= base_url('Products') ?>">Products</a>
+                    <a href="<?= base_url('About-Us') ?>">About Us</a>
+                    <a href="<?= base_url('Home') ?>">Home</a>
 
 
 

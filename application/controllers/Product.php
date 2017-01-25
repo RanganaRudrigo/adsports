@@ -16,11 +16,13 @@ class Product extends Front_Controller
         $this->load->model('Category_model', 'category');
         $this->load->model('Subcategory_model', 'subcategory');
 
+        $this->load->model('Offers_model', 'offer');
+        $this->load->model('Garments_model', 'garment');
+
         $this->load->helper("url");
         $this->load->library('pagination');
 
         $this->load->helper('download');
-
 
     }
 
@@ -348,5 +350,214 @@ class Product extends Front_Controller
 
     }
 
+
+//==================================================== Special Offer =========================================================
+
+
+    function special_offer(){
+
+//        p($CategoryId);
+
+        $d['total_count'] = $this->offer->count_by([]);
+
+//        $d['one_sub_category'] = $this->subcategory->get($CategoryId);
+//        p($this->db->last_query());
+        $d['count'] = $this->offer->count_by([]);
+//        $d['one_category'] = $this->category->get($CategoryId);
+//        $d['category_list'] = $this->category->order_by("Order", "ASC")->get_all();
+//        p($this->db->last_query());
+
+//        ============================================================================
+        $config["base_url"] = base_url() . "Special-Offers/";
+        $config["total_rows"] = $this->offer->count_by([]);
+
+        $config["per_page"] = 8;
+        $config["uri_segment"] = 2;
+        $choice = $config["total_rows"] / $config["per_page"];
+        $config["num_links"] = round($choice);
+
+        $config["use_page_numbers"] = TRUE;
+        $config['cur_tag_open'] = '<li class="active"><a>';
+        $config['cur_tag_close'] = '</a></li>';
+        $config["num_tag_open"] ='<li>';
+        $config["num_tag_close"] ='</li>';
+        $config["next_tag_open"] ='<li>';
+        $config["next_tag_close"] ='</li>';
+        $config["prev_tag_open"] ='<li>';
+        $config["prev_tag_close"] ='</li>';
+
+
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 1;
+        $d["products"] = $this->offer->order_by("Order", "ASC")->limit($config["per_page"],($page-1)*8)->get_all();
+        $d["links"] = $this->pagination->create_links();
+
+
+        $d['pages']=round($choice);
+
+//        $d['main_cate']=' <li><a href="'.base_url('Products/').url_title($d['one_category']->CategoryTitle).'/'.$d['one_category']->CategoryId .'"> '.$d['one_category']->CategoryTitle.' </a></li>';
+//        $d['main_cate_sub']='';
+
+//        $d['link'] = "";
+
+//        p($this->db->last_query());
+//        p($this->uri->segment(2));
+//        p($d['total_count']);
+
+        $this->view('special',$d);
+//        $this->view('product');
+
+
+    }
+
+    function special_offer_detail($ProductId){
+
+//        p($ProductId);
+
+//        $d['details']=$this->product->join('category')->join('sub_category')
+//        ->fields("{$this->product->table()}.* , CategoryTitle,SubCategoryTitle ")
+//        ->get_by(['ProductId' => $ProductId]);
+
+        $d['details'] = $this->offer->get($ProductId);
+
+//        p($this->db->last_query());
+
+        $d['related_products'] = $this->offer->limit(5)->order_by('rand()')->get_many_by(['CategoryId' => $d['details']->CategoryId]);
+
+        $d['one_sub_category'] = $this->subcategory->get($d['details']->SubCategoryId);
+        $d['one_category'] = $this->category->get($d['details']->CategoryId);
+
+//        p($this->db->last_query());
+
+        $d['main_cate']=' <li><a href="'.base_url('Products/').url_title($d['one_category']->CategoryTitle).'/'.$d['one_category']->CategoryId .'"> '.$d['one_category']->CategoryTitle.' </a></li>';
+
+        if($d['details']->SubCategoryId != 0){
+            $d['main_cate_sub']=' <li><a href="'.base_url('Product/').url_title($d['one_category']->CategoryTitle).'/'.url_title($d['one_sub_category']->SubCategoryTitle) .'/'.$d['one_sub_category']->SubCategoryId.'"> '.$d['one_sub_category']->SubCategoryTitle.' </a></li>';
+        }else{
+            $d['main_cate_sub']=' ';
+        }
+
+
+
+
+
+
+//        p($this->db->last_query());
+//
+//
+////        p($d['one_category']);
+//        p($d['details']);
+
+        $this->view('special_detail', $d);
+//        $this->view('detail');
+
+    }
+
+//======================================================= End Special Offers ===================================================
+
+
+//====================================================== Garment ================================================================
+    function garment($catId){
+
+//        p($CategoryId);
+
+        $d['total_count'] = $this->garment->count_by(['CategoryId'=>$catId]);
+//        p($this->db->last_query());
+//        $d['one_sub_category'] = $this->subcategory->get($CategoryId);
+//        p($this->db->last_query());
+        $d['count'] = $this->garment->get_many_by(['CategoryId'=>$catId]);
+//        $d['one_category'] = $this->category->get($CategoryId);
+//        $d['category_list'] = $this->category->order_by("Order", "ASC")->get_all();
+
+
+//        ============================================================================
+        $config["base_url"] = base_url() . "Garments/".url_title($this->uri->segment(2)).'/'.$catId;
+        $config["total_rows"] = $this->garment->count_by(['CategoryId'=>$catId]);
+
+        $config["per_page"] = 8;
+        $config["uri_segment"] = 4;
+        $choice = $config["total_rows"] / $config["per_page"];
+        $config["num_links"] = round($choice);
+
+        $config["use_page_numbers"] = TRUE;
+        $config['cur_tag_open'] = '<li class="active"><a>';
+        $config['cur_tag_close'] = '</a></li>';
+        $config["num_tag_open"] ='<li>';
+        $config["num_tag_close"] ='</li>';
+        $config["next_tag_open"] ='<li>';
+        $config["next_tag_close"] ='</li>';
+        $config["prev_tag_open"] ='<li>';
+        $config["prev_tag_close"] ='</li>';
+
+
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(4)) ? $this->uri->segment(4) : 1;
+        $d["products"] = $this->garment->order_by("Order", "ASC")->limit($config["per_page"],($page-1)*8)->get_many_by(['CategoryId'=>$catId]);
+        $d["links"] = $this->pagination->create_links();
+
+
+        $d['pages']=round($choice);
+
+//        $d['main_cate']=' <li><a href="'.base_url('Products/').url_title($d['one_category']->CategoryTitle).'/'.$d['one_category']->CategoryId .'"> '.$d['one_category']->CategoryTitle.' </a></li>';
+//        $d['main_cate_sub']='';
+
+        $d['link'] = "";
+
+//        p($this->db->last_query());
+//        p($this->uri->segment(4));
+//        p($d['total_count']);
+
+        $this->view('garments',$d);
+//        $this->view('product');
+
+
+    }
+
+
+    function garment_detail($ProductId){
+
+//        p($ProductId);
+
+//        $d['details']=$this->product->join('category')->join('sub_category')
+//        ->fields("{$this->product->table()}.* , CategoryTitle,SubCategoryTitle ")
+//        ->get_by(['ProductId' => $ProductId]);
+
+        $d['details'] = $this->garment->get($ProductId);
+
+//        p($this->db->last_query());
+
+        $d['related_products'] = $this->garment->limit(5)->order_by('rand()')->get_many_by(['CategoryId' => $d['details']->CategoryId]);
+
+//        $d['one_sub_category'] = $this->subcategory->get($d['details']->SubCategoryId);
+//        $d['one_category'] = $this->category->get($d['details']->CategoryId);
+
+//        p($this->db->last_query());
+
+//        $d['main_cate']=' <li><a href="'.base_url('Products/').url_title($d['one_category']->CategoryTitle).'/'.$d['one_category']->CategoryId .'"> '.$d['one_category']->CategoryTitle.' </a></li>';
+
+//        if($d['details']->SubCategoryId != 0){
+//            $d['main_cate_sub']=' <li><a href="'.base_url('Product/').url_title($d['one_category']->CategoryTitle).'/'.url_title($d['one_sub_category']->SubCategoryTitle) .'/'.$d['one_sub_category']->SubCategoryId.'"> '.$d['one_sub_category']->SubCategoryTitle.' </a></li>';
+//        }else{
+//            $d['main_cate_sub']=' ';
+//        }
+
+
+
+
+
+
+//        p($this->db->last_query());
+//
+//
+////        p($d['one_category']);
+//        p($d['details']);
+
+        $this->view('garment_detail', $d);
+//        $this->view('detail');
+
+    }
+
+
+//=============================================================== End Garment =====================================================
 
 }
