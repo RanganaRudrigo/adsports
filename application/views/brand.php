@@ -123,5 +123,12 @@
 <!-- End Preloading Screen -->
 
 <?php $this->view('inc/footer_js.php'); ?>
+<script type="text/javascript">
+
+    window.onload = function()
+    {
+        document.getElementById("brand").className = "hover home";
+    }
+</script>
 </body>
 </html>

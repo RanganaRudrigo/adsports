@@ -228,6 +228,12 @@
         });
     });
 </script>
+<script type="text/javascript">
 
+    window.onload = function()
+    {
+        document.getElementById("product").className = "hover home";
+    }
+</script>
 </body>
 </html>

@@ -24,10 +24,10 @@ class Advertisement extends MY_Controller
             ['index'=>'3', 'value'=> "Home Page Location 03"],
             ['index'=>'4', 'value'=> "Home Page Location 04"],
             ['index'=>'5', 'value'=> "Home Page Location 05"],
-            ['index'=>'6', 'value'=> "Home Page Location 06"],
-            ['index'=>'7', 'value'=> "Packages Page Advertisement"],
-            ['index'=>'8', 'value'=> "Package-Details page Advertisement"],
-            ['index'=>'9', 'value'=> "IP Tv page Advertisement"]
+//            ['index'=>'6', 'value'=> "Home Page Location 06"],
+//            ['index'=>'7', 'value'=> "Packages Page Advertisement"],
+//            ['index'=>'8', 'value'=> "Package-Details page Advertisement"],
+//            ['index'=>'9', 'value'=> "IP Tv page Advertisement"]
         ];
 
 

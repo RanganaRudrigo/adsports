@@ -39,7 +39,7 @@
                     <!--changed listings-->
                     <div class="products-list row list">
 
-                        <?php foreach ($products as $product): ?>
+                        <?php foreach ($products_data as $product): ?>
 
                             <div class="product-layout col-md-3 col-sm-4 col-xs-12 ">
                                 <div class="product-item-container">
@@ -123,5 +123,13 @@
 <!-- End Preloading Screen -->
 
 <?php $this->view('inc/footer_js.php'); ?>
+
+<script type="text/javascript">
+
+    window.onload = function()
+    {
+        document.getElementById("product").className = "hover home";
+    }
+</script>
 </body>
 </html>

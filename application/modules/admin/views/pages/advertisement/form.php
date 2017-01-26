@@ -39,31 +39,31 @@
                             <br/>
                             <dl class="dl-horizontal row">
                                 <dt class="col-sm-3">Home Page Location 01</dt>
-                                <dd class="col-sm-9">270px * 250px</dd>
+                                <dd class="col-sm-9">590px * 120px</dd>
 
                                 <dt class="col-sm-3">Home Page Location 02</dt>
-                                <dd class="col-sm-9">590px * 120px</dd>
+                                <dd class="col-sm-9">290px * 120px</dd>
 
                                 <dt class="col-sm-3">Home Page Location 03</dt>
-                                <dd class="col-sm-9">590px * 120px</dd>
+                                <dd class="col-sm-9">290px * 120px</dd>
 
                                 <dt class="col-sm-3 text-truncate">Home Page Location 04</dt>
                                 <dd class="col-sm-9">270px * 250px</dd>
 
                                 <dt class="col-sm-3 text-truncate">Home Page Location 05</dt>
-                                <dd class="col-sm-9">270px * 250px</dd>
+                                <dd class="col-sm-9">270px * 270px</dd>
 								
-								<dt class="col-sm-3 text-truncate">Home Page Location 06</dt>
-                                <dd class="col-sm-9">270px * 250px</dd>
+								<!--<dt class="col-sm-3 text-truncate">Home Page Location 06</dt>
+                                <dd class="col-sm-9">270px * 250px</dd>-->
 
-                                <dt class="col-sm-3">Packages Page Advertisement</dt>
-                                <dd class="col-sm-9">270px * 250px</dd>
+<!--                                <dt class="col-sm-3">Packages Page Advertisement</dt>-->
+<!--                                <dd class="col-sm-9">270px * 250px</dd>-->
 
-                                <dt class="col-sm-3 text-truncate">Package-Details page Advertisement</dt>
-                                <dd class="col-sm-9">270px * 250px</dd>
+<!--                                <dt class="col-sm-3 text-truncate">Package-Details page Advertisement</dt>-->
+<!--                                <dd class="col-sm-9">270px * 250px</dd>-->
 
-                                <dt class="col-sm-3 text-truncate">IP Tv page Advertisement</dt>
-                                <dd class="col-sm-9">270px * 250px</dd>
+<!--                                <dt class="col-sm-3 text-truncate">IP Tv page Advertisement</dt>-->
+<!--                                <dd class="col-sm-9">270px * 250px</dd>-->
                             </dl>
                         </div>
                         <div class="row">

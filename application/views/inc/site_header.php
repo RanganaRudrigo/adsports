@@ -37,7 +37,7 @@
         <div class="row">
             <!-- Logo -->
             <div class="navbar-logo col-md-4-1 col-sm-12 col-xs-12" >
-                <a href=""><img src="<?= base_url('media/images/') ?>logo.png" title="" alt="" /></a>
+                <a href="<?= base_url('Home') ?>"><img src="<?= base_url('media/images/') ?>logo.png" title="" alt="" /></a>
             </div>
             <!-- //end Logo -->
 
@@ -62,17 +62,17 @@
                                     <div class="container">
                                         <ul class="megamenu " data-transition="slide" data-animationtime="250">
 
-                                            <li class=" hover home">
+                                            <li id="home" class=" hover ">
                                                 <p class="close-menu"></p>
                                                 <a href="<?= base_url('Home') ?>" class="clearfix">Home</a>
 
                                             </li>
-                                            <li class=" hover">
+                                            <li id="about" class=" hover">
                                                 <p class="close-menu"></p>
                                                 <a href="<?= base_url('About-Us') ?>" class="clearfix">About Us</a>
 
                                             </li>
-                                            <li class="with-sub-menu hover"><a href="<?= base_url('Products') ?>"
+                                            <li id="product" class="with-sub-menu hover"><a href="<?= base_url('Products') ?>"
                                                                                class="clearfix"> produts
                                                     <div class="caret"></div>
                                                 </a>
@@ -93,20 +93,20 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="with-sub-menu hover">
+                                            <li id="brand" class="with-sub-menu hover">
                                                 <p class="close-menu"></p>
                                                 <a href="<?= base_url('Brands') ?>" class="clearfix">Brands</a>
 
                                             </li>
 
-                                            <li class="with-sub-menu hover">
+                                            <li id="special" class="with-sub-menu hover">
                                                 <p class="close-menu"></p>
                                                 <a href="<?= base_url('Special-Offers') ?>" class="clearfix">Special Offers</a>
 
                                             </li>
 
 
-                                            <li class="with-sub-menu hover"><a href="javascript:"
+                                            <li id="garment" class="with-sub-menu hover"><a href="javascript:"
                                                                                class="clearfix"> Garments
                                                     <div class="caret"></div>
                                                 </a>
@@ -136,7 +136,7 @@
                                             </li>
 
 
-                                            <li class="">
+                                            <li id="contact" class="">
                                                 <p class="close-menu"></p>
                                                 <a href="<?= base_url('Contact-Us') ?>" class="clearfix">Contact Us</a>
                                             </li>
@@ -256,30 +256,24 @@
             <!-- Search -->
             <div class="header-bottom-right  col-md-9 col-sm-6 col-xs-4 ">
                 <div id="sosearchpro" class="col-sm-7 search-pro">
-                    <form method="GET" action="index.html">
+                    <form method="GET" action="<?= base_url('Products/Search?'); ?>">
                         <div id="search0" class="search input-group">
-                            <div class="select_category filter_type icon-select">
-                                <select class="no-border" name="category_id">
-                                    <option value="0">All Categories</option>
-                                    <option value="78">Bats</option>
-                                    <option value="77">Caps</option>
-                                    <option value="82"></option>
-                                    <option value="80">Safety Items</option>
-                                    <option value="81">Other </option>
-                                    <option value="79">Video Games</option>
-                                    <option value="20">Sports &amp; </option>
-                                    <option value="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cricket</option>
-                                    <option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vollyball</option>
-                                    <option value="27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NetBall</option>
-                                </select>
-                            </div>
-
-                            <input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Search" name="search">
-								<span class="input-group-btn">
-								<button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
-								</span>
-                        </div>
-                        <input type="hidden" name="route" value="product/search" />
+                            <div class="select_category filter_type icon-select"><select class="no-border"
+                                                                                         name="category_id">
+                                    <option value=""> Select Category
+                                    </option>
+                                    <?php foreach ($categories as $k => $cate_list_search): ?>
+                                        <option
+                                            value="<?= $cate_list_search->CategoryId ?>" <?= set_value('category_id', $this->input->get('category_id')) == $cate_list_search->CategoryId ? "selected" : "" ?> >
+                                            <?= $cate_list_search->CategoryTitle ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select></div>
+                            <input class="autosearch-input form-control" type="text"
+                                   value="<?= set_value('key', $this->input->get('key')) ?>" size="50"
+                                   autocomplete="off" placeholder="Search" name="key"> <span class="input-group-btn">								<input
+                                    type="submit" class="button-search btn btn-primary " value="Search"><i
+                                    class="fa fa-search"></i></input>								</span></div>
                     </form>
                 </div>
             </div>

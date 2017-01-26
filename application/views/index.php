@@ -69,19 +69,19 @@
                                 <div class="m-banner-right">
                                     <div class="m-banner2 banners">
                                         <div>
-                                            <a href="#"><img src="<?= base_url('media/images/') ?>v2-banner2.jpg" alt="banner1"></a>
+                                            <a target="_blank" href="<?= $home_addz_01->AddURL; ?>"><img src="<?= UP.$home_addz_01->Image; ?>" alt="banner1"></a>
                                         </div>
                                     </div>
 
                                     <div class="m-banner34">
                                         <div class="m-banner3 banners">
                                             <div>
-                                                <a href="#"><img src="<?= base_url('media/images/') ?>v2-banner3.jpg" alt="banner1"></a>
+                                                <a target="_blank" href="<?= $home_addz_03->AddURL; ?>"><img src="<?= UP.$home_addz_02->Image; ?>" alt="banner2"></a>
                                             </div>
                                         </div>
                                         <div class="m-banner4 banners ">
                                             <div>
-                                                <a href="#"><img src="<?= base_url('media/images/') ?>v2-banner4.jpg" alt="banner1"></a>
+                                                <a target="_blank" href="<?= $home_addz_03->AddURL; ?>"><img src="<?= UP.$home_addz_03->Image; ?>" alt="banner3"></a>
                                             </div>
                                         </div>
 
@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="m-banner1 banners hidden-xs">
                                     <div>
-                                        <a href="#"><img src="<?= base_url('media/images/') ?>v2-banner1.jpg" alt="banner1"></a>
+                                        <a target="_blank" href="<?= $home_addz_04->AddURL; ?>"><img src="<?= UP.$home_addz_04->Image; ?>" alt="banner1"></a>
                                     </div>
                                 </div>
 
@@ -286,20 +286,17 @@
                         <div class="block-clientsay block ">
                             <div class="slider-clients-say1">
                                 <div class="item">
+
                                     <div class="client-cont">
                                         <a>&nbsp;&nbsp;<img src="<?= base_url('media/images/') ?>shop.png" class="img block" style="">  Nugegoda Branch</a>
                                         <p >&nbsp;&nbsp;#180D, Heighlevel Road, Nugegoda, <br>&nbsp;&nbsp;Sri Lanka <br>&nbsp;&nbsp;Tele :  +94 112 828 309 <br></p>
-
-
-
                                     </div>
+
                                     <div class="client-cont" >
                                         <a>&nbsp;&nbsp;<img src="<?= base_url('media/images/') ?>shop.png" class="img block"></i>  Pannipitiya Branch</a>
                                         <p >&nbsp;&nbsp;#323, Heighlevel Road,
                                             Moraketiya, &nbsp;&nbsp;Pannipitiya, Sri Lanka
                                             <br>&nbsp;&nbsp;Tele : +94 114 921 986 </p>
-
-
                                     </div>
 
                                 </div>
@@ -312,7 +309,7 @@
                     <div class="modcontent clearfix">
                         <div class="banners">
                             <div>
-                                <a href="#"><img src="<?= base_url('media/images/') ?>v2-banner-right.jpg" alt="banner1"></a>
+                                <a target="_blank" href="<?= $home_addz_05->AddURL; ?>"><img src="<?= UP.$home_addz_05->Image; ?>" alt="banner5"></a>
                             </div>
                         </div>
 
@@ -466,5 +463,13 @@
     </script>
 
 <?php endforeach; ?>
+
+<script type="text/javascript">
+
+    window.onload = function()
+    {
+        document.getElementById("home").className = "hover home";
+    }
+</script>
 </body>
 </html>

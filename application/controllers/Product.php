@@ -39,27 +39,29 @@ class Product extends Front_Controller
             $this->db->join('category', 'product.CategoryId=category.CategoryID');
             $this->db->select("product.*,category.CategoryTitle");
             $this->db->or_like('CategoryTitle', $this->input->get('key'));
+            $this->db->or_like('product.ProductTitle', $this->input->get('key'));
             $this->db->or_like('product.ShortDescription', $this->input->get('key'));
             $this->db->or_like('product.Description', $this->input->get('key'));
         }else{
             $this->db->select("product.*");
             $this->db->like('product.CategoryID', $this->input->get('category_id'));
             $this->db->group_start();
+            $this->db->or_like('product.ProductTitle', $this->input->get('key'));
             $this->db->or_like('product.ShortDescription', $this->input->get('key'));
             $this->db->or_like('product.Description', $this->input->get('key'));
             $this->db->group_end();
 
         }
-        $d['products'] = $this->product->order_by("Order", "ASC")->get_all();
+        $d['products1'] = $this->product->order_by("Order", "ASC")->get_all();
 
 //        p($this->db->last_query());
 
 //        p($d['products']);
 //        p(count($d['products']));
 
-        $d['total_count'] = count($d['products']);
+        $d['total_count'] = count($d['products1']);
         $config["base_url"] = base_url() . "Products/Search?category_id=".$this->input->get('category_id')."&key=".$this->input->get('key');
-        $config["total_rows"] = count($d['products']);
+        $config["total_rows"] = count($d['products1']);
 
         $config["per_page"] = 8;
         $config["uri_segment"] = 2;
@@ -100,6 +102,7 @@ class Product extends Front_Controller
             $this->db->select("product.*,category.CategoryTitle");
 //            $this->db->like('BrandTitle', $this->input->get('key'));
             $this->db->or_like('CategoryTitle', $this->input->get('key'));
+            $this->db->or_like('product.ProductTitle', $this->input->get('key'));
             $this->db->or_like('product.ShortDescription', $this->input->get('key'));
             $this->db->or_like('product.Description', $this->input->get('key'));
 //            $this->db->or_like('ModelNumber', $this->input->get('key'));
@@ -109,18 +112,22 @@ class Product extends Front_Controller
             $this->db->select("product.*");
             $this->db->like('product.CategoryID', $this->input->get('category_id'));
             $this->db->group_start();
+            $this->db->or_like('product.ProductTitle', $this->input->get('key'));
             $this->db->or_like('product.ShortDescription', $this->input->get('key'));
             $this->db->or_like('product.Description', $this->input->get('key'));
             $this->db->group_end();
 
         }
-        $d['products'] = $this->product->order_by("Order", "ASC")->limit($config["per_page"],$page)->get_all();
+        $d['products_data'] = $this->product->order_by("Order", "ASC")->limit($config["per_page"],$page)->get_all();
 //        p($this->db->last_query());
 //        p($page-1);
         $d['pages']=round($choice);
 //      $d['products'] = $this->product->order_by("Order", "ASC")->limit($config["per_page"],($page-1)*8)->get_all();
         $d["links"] = $this->pagination->create_links();
         $d['link'] = "";
+
+
+
 
 
 

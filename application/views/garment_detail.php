@@ -229,6 +229,12 @@
         });
     });
 </script>
+<script type="text/javascript">
 
+    window.onload = function()
+    {
+        document.getElementById("garment").className = "hover home";
+    }
+</script>
 </body>
 </html>
