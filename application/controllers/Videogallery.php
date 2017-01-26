@@ -68,7 +68,8 @@ class Videogallery extends Front_Controller
 //        p($this->db->last_query());
 //        p($d['count']);
 
-        $this->view('galleryvideo', $d);
+//        $this->view('galleryvideo', $d);
+        $this->view('galleryvideo');
 
 //        $this->load->view('on_project');
 

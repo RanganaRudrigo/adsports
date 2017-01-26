@@ -13,10 +13,9 @@
                 <div class="col-md-4">
                     <div class="feature-box well">
                         <img src="<?= UP.$val->Image ?>"  class="img-thumbnail" >
-                        <!--                                                        <i class="feature-icon fa fa-book"></i>-->
+                        <!--<i class="feature-icon fa fa-book"></i>-->
                         <div class="col-md-6">
                             <h4><?= $val->ChannelTitle ?></h4>
-
                         </div>
                     </div>
                 </div>
