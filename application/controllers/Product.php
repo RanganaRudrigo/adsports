@@ -35,7 +35,7 @@ class Product extends Front_Controller
 //        p($this->input->get('key'));
 //        p($this->input->get('category_id'));
 
-        if(empty($this->input->get('category_id'))){
+        if($this->input->get('category_id')){
             $this->db->join('category', 'product.CategoryId=category.CategoryID');
             $this->db->select("product.*,category.CategoryTitle");
             $this->db->or_like('CategoryTitle', $this->input->get('key'));
@@ -153,7 +153,8 @@ class Product extends Front_Controller
         $config["per_page"] = 8;
         $config["uri_segment"] = 2;
         $choice = $config["total_rows"] / $config["per_page"];
-        $config["num_links"] = round($choice);
+//        $config["num_links"] = round($choice);
+        $config["num_links"] = 3;
 
         $config["use_page_numbers"] = TRUE;
         $config['cur_tag_open'] = '<li class="active"><a>';
@@ -163,8 +164,20 @@ class Product extends Front_Controller
         $config["next_tag_open"] ='<li  >';
         $config["next_tag_close"] ='</li>';
 
+//        $config['num_tag_open'] = '<div class="hidden">';
+//        $config['num_tag_close'] = '</div>';
+
+
         $config["prev_tag_open"] ='<li  >';
         $config["prev_tag_close"] ='</li>';
+
+        $config["first_link"] = "&laquo;";
+        $config["first_tag_open"] = "<li>";
+        $config["first_tag_close"] = "</li>";
+
+        $config["last_link"] = "&raquo;";
+        $config["last_tag_open"] = "<li>";
+        $config["last_tag_close"] = "</li>";
 
 //        $config['next_link'] = 'Next';
 //        $config['prev_link'] = 'Previous';
